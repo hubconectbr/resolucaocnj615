@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -15,9 +16,7 @@
     label { display: block; margin-top: 1rem; font-weight: bold; }
     input[type="text"], input[type="email"] { width: 100%; padding: 0.5rem; margin-top: 0.25rem; border: 1px solid #ccc; border-radius: 5px; }
     input[type="submit"] { margin-top: 1.5rem; padding: 0.75rem 1.5rem; background-color: #2c3e50; color: white; border: none; border-radius: 5px; cursor: pointer; }
-    .thanks-message { display: none; margin-top: 2rem; font-size: 1rem; background: #dff0d8; color: #3c763d; padding: 1rem; border-radius: 5px; }
     footer { text-align: center; margin-top: 2rem; padding: 1rem; font-size: 0.85rem; color: #666; }
-    a { color: #2c3e50; text-decoration: none; font-weight: bold; }
 
     @media (max-width: 480px) {
       header h1 { font-size: 1.5rem; }
@@ -31,15 +30,15 @@
     <h1>🧠 Assistente Resolução CNJ 615/2025</h1>
     <p>Governança e Implementação de Inteligência Artificial no Judiciário com apoio da ITSBI</p>
   </header>
+
   <div class="container">
     <h2>📘 Apresentação</h2>
-    <p>O Chat de Implementação da Resolução CNJ 615/2025 é uma ferramenta desenvolvida para apoiar profissionais do Direito, gestores públicos, servidores do Judiciário e especialistas em tecnologia na aplicação prática e ética da inteligência artificial no sistema de justiça. Seu foco é facilitar a interpretação e operacionalização da Resolução 615, articulando os três eixos fundamentais de governança tecnológica conforme a Teoria Tridimensional do Direito de Miguel Reale:</p>
+    <p>O Chat de Implementação da Resolução CNJ 615/2025 é uma ferramenta desenvolvida para apoiar profissionais do Direito, gestores públicos, servidores do Judiciário e especialistas em tecnologia na aplicação prática e ética da inteligência artificial no sistema de justiça.</p>
     <ul>
       <li><strong>Fato:</strong> o avanço das tecnologias de IA e suas aplicações no Judiciário</li>
       <li><strong>Norma:</strong> os requisitos legais e normativos da Resolução CNJ 615/2025 e das ISOs 23894, 42001 e 38507</li>
       <li><strong>Valor:</strong> a ética, os direitos fundamentais e a confiança institucional</li>
     </ul>
-    <p>Este GPT é uma ponte entre a técnica e o jurídico, promovendo conformidade, inovação responsável e segurança jurídica no uso da IA no setor público.</p>
 
     <h2>🎯 Quem deve usar?</h2>
     <ul>
@@ -61,11 +60,6 @@
 
       <input type="submit" value="Enviar">
     </form>
-
-    <div class="thanks-message" id="thanksMessage">
-      ✅ Obrigado pelo envio! Em breve retornaremos o seu contato.<br>
-      📎 Você pode também me encontrar no <a href="https://www.linkedin.com/in/beneditopalheta/" target="_blank">LinkedIn de Benedito Palheta</a>.
-    </div>
   </div>
 
   <footer>
@@ -74,8 +68,6 @@
 
   <script>
     const form = document.getElementById('customForm');
-    const thanks = document.getElementById('thanksMessage');
-
     form.addEventListener('submit', function(event) {
       event.preventDefault();
       const formData = new FormData(form);
@@ -85,8 +77,7 @@
         mode: "no-cors",
         body: formData
       }).then(() => {
-        form.style.display = 'none';
-        thanks.style.display = 'block';
+        window.location.href = 'obrigado.html';
       });
     });
   </script>
